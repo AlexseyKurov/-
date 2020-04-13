@@ -19,6 +19,9 @@ import MorePanelExample from './js/panels/more/example';
 import HomeBotsListModal from './js/components/modals/HomeBotsListModal';
 import HomeBotInfoModal from './js/components/modals/HomeBotInfoModal';
 
+
+
+
 class App extends React.Component {
     constructor(props) {
         super(props);

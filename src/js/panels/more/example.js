@@ -56,6 +56,8 @@ class HomePanelProfile extends React.Component {
         };
     }
 
+
+
     componentWillUnmount() {
         this.props.setFormData('example_form', this.state.inputData);
     }
@@ -68,38 +70,20 @@ class HomePanelProfile extends React.Component {
                 <PanelHeader
                     left={<PanelHeaderBack onClick={() => goBack()}/>}
                 >
-                    Модальное окно
+                    ДО ЛЕТА
                 </PanelHeader>
-                <Group>
-                    <FormLayout>
-                        <FormLayoutGroup top="Работа">
-                            <Input value={this.state.inputData.workplace}
-                                   onChange={this.handleInput}
-                                   name="workplace"
-                                   placeholder="Место работы"
-                                   autoComplete="off"/>
-                            <Input value={this.state.inputData.workposition}
-                                   onChange={this.handleInput}
-                                   name="workposition"
-                                   placeholder="Должность"
-                                   autoComplete="off"/>
-                        </FormLayoutGroup>
-                        <FormLayoutGroup top="Дополнительно">
-                            <Checkbox checked={this.state.inputData.checkboxPhoto}
-                                      onChange={this.handleInput}
-                                      name="checkboxPhoto"
-                            >С фотографией</Checkbox>
-                            <Checkbox checked={this.state.inputData.checkboxOnline}
-                                      onChange={this.handleInput}
-                                      name="checkboxOnline"
-                            >Сейчас на сайте</Checkbox>
-                        </FormLayoutGroup>
-                    </FormLayout>
-                    <Div className="buttons-group">
-                        <Button size="l" stretched={true} onClick={() => goBack()}>Сохранить</Button>
-                        <Button size="l" stretched={true} onClick={this.clearForm}>Очистить</Button>
-                    </Div>
-                </Group>
+               
+<div id="countdown">
+  <div id="tiles"></div>
+  <div class="labels">
+    <li>Дней</li>
+    <li>Часов</li>
+    <li>Минут</li>
+    <li>Секунд</li>
+  </div>
+</div>
+        
+
             </Panel>
         );
     }

@@ -8,6 +8,7 @@ import * as VK from './js/services/VK';
 import {View, Root, ModalRoot, ConfigProvider} from "@vkontakte/vkui";
 
 import HomePanelProfile from './js/panels/home/base';
+import HomePanelProfile from './js/panels/home/top';
 import HomePanelGroups from './js/panels/home/groups';
 
 import HomeBotsListModal from './js/components/modals/HomeBotsListModal';

@@ -50,49 +50,32 @@ class HomePanelProfile extends React.Component {
 
         return (
             <Panel id={id}>
-                <PanelHeader noShadow={true}>Examples 2</PanelHeader>
+                <PanelHeader noShadow={true}>Информация</PanelHeader>
                 <FixedLayout vertical="top">
                     <Tabs theme="header" mode="default">
                         <HorizontalScroll id="EXAMPLE_TABS_LIST">
+
                             <TabsItem
-                                onClick={() => this.setTab('modal')}
-                                selected={this.state.activeTab === 'modal'}
+                                onClick={() => this.setTab('brak')}                                
+                                selected={this.state.activeTab === 'brak'}
+                                dddd
                             >
-                                Модальное окно
+                                О приложении
                             </TabsItem>
-                            <TabsItem
-                                onClick={() => this.setTab('test')}
-                                selected={this.state.activeTab === 'test'}
-                            >
-                                Для теста
-                            </TabsItem>
-                            <TabsItem
-                                onClick={() => this.setTab('test2')}
-                                selected={this.state.activeTab === 'test2'}
-                            >
-                                Для теста 2
-                            </TabsItem>
-                            <TabsItem
-                                onClick={() => this.setTab('test3')}
-                                selected={this.state.activeTab === 'test3'}
-                            >
-                                Для теста 3
-                            </TabsItem>
+
+                          
                         </HorizontalScroll>
                     </Tabs>
                 </FixedLayout>
-                <Group style={boxStyle}>
-                    {this.state.activeTab === 'modal' && <CellButton onClick={() => setPage('modal', 'filters')}>
-                        Открыть модальное окно
-                    </CellButton>}
 
-                    {this.state.activeTab !== 'modal' && <Div>{this.state.activeTab}</Div>}
-                </Group>
+                
             </Panel>
         );
     }
 
 }
+
+
 
 const mapStateToProps = (state) => {
     return {

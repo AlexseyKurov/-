@@ -5,15 +5,12 @@ import {closePopout, goBack, openModal, openPopout, setPage} from '../../store/r
 
 import {Div, Panel, Alert, Group, Button, PanelHeader} from "@vkontakte/vkui"
 
+
+
+
 class HomePanelBase extends React.Component {
 
-    state = {
-        showImg: false
-    };
 
-    showImg = () => {
-        this.setState({showImg: true});
-    };
 
     openPopout() {
         this.props.openPopout(
@@ -29,8 +26,7 @@ class HomePanelBase extends React.Component {
                 }]}
                 onClose={() => this.props.closePopout()}
             >
-                <h2>Вопрос значит</h2>
-                <p>Вас роняли в детстве?</p>
+                <h2>Перейти к покупке?</h2>
             </Alert>
         );
     }
@@ -40,30 +36,24 @@ class HomePanelBase extends React.Component {
 
         return (
             <Panel id={id}>
-                <PanelHeader>Examples</PanelHeader>
-                <Group>
-                    <Div>
-                        <Button mode="secondary" size="l" stretched={true} onClick={() => setPage('home', 'groups')}>Список моих
-                            групп</Button>
+                <PanelHeader>Сундучок</PanelHeader>
+                
+                
+
+
+<Div className="div-center">
+                        <img src="https://sun3-10.userapi.com/Wis7EwnrgnJrPfIMKC7xIDXL-KybhljD_RtEpg/UDEg1mIo_GE.jpg" alt="Стикер VK"/>
                     </Div>
-                    <Div>
-                        <Button mode="secondary" size="l" stretched={true} onClick={() => this.openPopout()}>Открыть алерт</Button>
+                <Div>    
+
+                 <a class="buttons" href='https://my.qiwi.com/Aleksei-KLym5a6TAy?noCache=true' >Открыть Сундучок</a>
+<center><text> Правила игры просты, вы открываете сундучок за определенную сумму и если вы выигрываете то сумма которую вы потратили умножиться на 2!</text></center>
                     </Div>
-                    <Div>
-                        <Button mode="secondary" size="l" stretched={true} onClick={() => this.props.openModal("MODAL_PAGE_BOTS_LIST")}>Открыть
-                            модальную страницу</Button>
-                    </Div>
-                    {withoutEpic && <Div>
-                        <Button mode="secondary" size="l" stretched={true} onClick={() => setPage('modal', 'filters')}>Открыть модальное окно</Button>
-                    </Div>}
-                    {this.state.showImg && <Div className="div-center">
-                        <img src="https://vk.com/sticker/1-12676-256" alt="Стикер VK"/>
-                    </Div>}
-                </Group>
+                
             </Panel>
         );
     }
-
+ 
 }
 
 const mapDispatchToProps = {
