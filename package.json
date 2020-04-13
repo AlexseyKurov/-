@@ -6,7 +6,7 @@
   "homepage": "https://github.com/AlexseyKurov/-",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "vk-miniapps-deploy"
     "start": "cross-env PORT=10888 react-scripts start",
     "build": "react-scripts build"
   },
